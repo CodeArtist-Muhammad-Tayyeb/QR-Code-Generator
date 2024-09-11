@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>QR Code Generator</h1>
+        <input type="text" class="input-box" placeholder="Text or URL" id="qrText">
+        <div id="imageBox">
+            <img src="" id="qrImage">
+        </div>
+        <button class="buttonForGenerating" onclick="generateQR()">Generate</button>
+    </div>
+    <p class="little-Intro">Design by <a href="https://m-tayyeb-personal-portfolio.vercel.app/"
+        target="_blank">Code-Artist</a></p>
+
+<script>
+    var imageBox = document.getElementById('imageBox');
+    var qrImage = document.getElementById('qrImage');
+    var qrText = document.getElementById('qrText');
+
+    function generateQR(){
+        qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrText.value;
+        imageBox.classList.add('show-img');
+    }
+
+
+</script>
+    
+</body>
+</html>

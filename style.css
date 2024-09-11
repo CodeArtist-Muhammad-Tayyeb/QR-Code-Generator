@@ -111,10 +111,8 @@ button:hover {
 .little-Intro a:hover {
     transform: scale(1.05);
     border-bottom: 3px solid #edeef0;
-    background: #CF00FF;
+    background: #FF7700;
 }
-
-
 
 /* Responsive Styles */
 /* For tablets (portrait) */
